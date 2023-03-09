@@ -5,10 +5,60 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contagem Aniverário</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="styles/main.scss">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
 </head>
 <body>
-    <img src="./images/aniversario.png" alt="">
+    <section class="principal">
+        <div class="container">
+            <img class="principal__imagem" src="./images/aniversario.png" alt="">
+            <p class="principal__texto">
+                A comemoração do meu aniversário será daqui a <br><span id="contador"></span>
+            </p>
+            <div class="principal__infos-bar">
+                <ul class="principal__infos-bar__infos">
+                    <li class="principal__infos-bar__infos__item">
+                        <b>Localização</b>
+                        Bar Aniversário - São Paulo - SP
+                    </li>
+                    <li class="principal__infos-bar__infos__item">
+                        <b>Quando</b>
+                        10/09/2023 às 19h
+                    </li>
+                </ul>
+                <a href="#" class="button button--primary">
+                    Confirme sua presença
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="evento">
+        <div class="container" data-aos="fade-right">
+            <div class="evento__detalhes evento__detalhes--escuro">
+                <h2 class="evento__detalhes__titulo evento__detalhes__titulo--escuro">Bar Aniversário</h2>
+                <p class="evento__detalhes__descricao evento__detalhes__descricao--escuro">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quasi sapiente aliquam consequatur. Maxime perferendis iste eum voluptate vel porro accusantium atque ab odit. Aliquid qui nobis praesentium perferendis natus?
+                </p>
+            </div>
+            <img class="evento__imagem evento__imagem--direita" src="./images/bar.jpg" alt="Bar Aniversário">
+        </div>
+        <div class="container container--imagem-esquerda" data-aos="fade-left">
+            <div class="evento__detalhes">
+                <h2 class="evento__detalhes__titulo evento__detalhes__titulo--claro">Localização</h2>
+                <p class="evento__detalhes__descricao evento__detalhes__descricao--claro">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quasi sapiente aliquam consequatur. Maxime perferendis iste eum voluptate vel porro accusantium atque ab odit. Aliquid qui nobis praesentium perferendis natus?
+                </p>
+            </div>
+            <img class="evento__imagem evento__imagem--esquerda" src="./images/localizacao.png" alt="Front-end">
+        </div>
+    </section>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="scripts/main.js"></script>
 </body>
 </html>

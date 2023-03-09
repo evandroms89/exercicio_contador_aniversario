@@ -1,0 +1,137 @@
+@use 'variaveis';
+
+.principal {
+
+    background-color: variaveis.$corBege;
+
+    .container{
+        display: block;
+        max-width: 1024px;
+        margin: 0 auto;
+        padding-bottom: 72px;
+       
+    }
+
+    &__imagem {
+        display: block;
+        width: 250px;
+        margin: 0 auto;
+        padding-top: 24px;
+    }
+
+    &__texto {
+        margin-top: 32px;
+        margin-bottom: 48px;
+        font-size: 40px;
+        line-height: 56px;
+        font-weight: 800;
+        text-align: center;
+        color: variaveis.$corRoxoEscuro;
+    }
+
+    @media (max-width: 640px) {
+        padding: 8px 0;
+
+        .container {
+            padding-bottom: 32px;
+        }
+
+        &__imagem {
+            width: 200px;
+        }
+
+        &__texto {
+            font-size: 22px;
+            line-height: 26px;
+            margin: 24px 16px;
+        }
+    }
+
+    @media (max-width: 1024px) {
+
+        &__imagem {
+            padding-top: 32px;
+        }
+
+        &__texto {
+            font-size: 28px;
+            line-height: 32px;
+            margin: 38px 16px;
+        }
+    }
+
+    &__infos-bar {
+        padding: 16px 24px;
+        display: flex;
+        justify-content: space-between;
+        border: 2px solid variaveis.$corVerde;
+        border-radius: 10px;
+    
+        &__infos {
+            display: flex;
+            gap: 100px;
+    
+            &__item {
+                font-size: 14px;
+                color: variaveis.$corRoxoEscuro;
+    
+                b {
+                    color: variaveis.$corRoxoEscuro;
+                    font-size: 18px;
+                    display: block;
+                }
+            }
+        }
+    
+        @media (max-width: 640px) {
+            display: block;
+            margin: 0px 20px;
+    
+            &__infos {
+                display: block;
+    
+                &__item {
+                    margin-bottom: 24px;
+                }
+            }
+        }
+    
+        @media (max-width: 1024px) {
+            margin: 0 44px;
+
+            &__infos {
+                gap: 44px;
+            }
+        }
+
+        .button {
+            padding: 12px;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            text-align: center;
+            white-space: nowrap;
+            border-radius: 10px;
+        
+            &--primary {
+                color: variaveis.$corBege;
+                background-color: variaveis.$corRoxo;
+
+                &:hover {
+                    background-color: lighten(variaveis.$corRoxo, 10%);
+                    transition: background-color .3s ease ;
+                }
+            }
+        
+            @media (max-width: 640px) {
+                display: block;
+                width: 100%;
+            }
+        
+            @media (max-width: 1024px) {
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+}
